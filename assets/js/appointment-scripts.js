@@ -50,6 +50,7 @@ function Appointments(cpr){
 
 	this.showModal = function(event){
 		var appointment = appointments.getAppointment(event.id)
+		console.log(appointment)
 		$(".smallTitle[title='place'] span").text(appointment.Hospital.name+", "+appointment.Hospital.address+", "+appointment.Hospital.section)
 		$(".smallTitle[title='date'] span").text(appointment.date_time.substr(0,16))
 		$(".lightbox, .modal").addClass("show")
@@ -59,7 +60,6 @@ function Appointments(cpr){
 		var appointment = {}
 		$.each(this.appointments, function(k,v){
 			if(v.id == id){
-				console.log("returning", v)
 				appointment = v
 			}
 		})

@@ -24,7 +24,8 @@
 
 .container{
 	text-align: center;
-	height: 100vh;
+	min-height: 100vh;
+	padding-bottom: 2vh;
 }
 
 .landing{
@@ -211,4 +212,7 @@ nav ul li{
 	z-index: 22;
 }
 
-
+.fc-event, .fc-event-dot{
+	background-color: #17a2b8;
+	color: #FFF!important;
+}
