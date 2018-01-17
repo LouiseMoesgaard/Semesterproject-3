@@ -1,0 +1,225 @@
+#appointment_body{
+	background-color: #17a2b8; 
+}
+
+#appointment, nav{
+	background-color: #FFF
+}
+
+#treatment_body{
+	background-color: #17a2b8; 
+}
+
+#treatment, nav{
+	background-color: #FFF
+}
+
+#FAQ_body{
+	background-color: #17a2b8; 
+}
+
+#FAQ, nav{
+	background-color: #FFF
+}
+
+.container{
+	text-align: center;
+	min-height: 100vh;
+	padding-bottom: 2vh;
+}
+
+.landing{
+	background-image: url("../images/landing-bg.jpg");
+	height: 45vh;
+	margin-top: 7vh;
+	padding: 2.5rem;
+	background-repeat: no-repeat;
+	background-position-y: 32%;
+    background-position-x: 50%;
+    background-size: 3500px;
+}
+
+.welcome{
+	background-image: url("../images/landing-bg.jpg");
+	height: 45vh;
+	margin-top: 7vh;
+	padding: 2.5rem;
+	background-repeat: no-repeat;
+	background-position-y: 32%;
+    background-position-x: 50%;
+    background-size: 3500px;
+}
+.btn{
+
+}
+
+.card[class*="login"] form label{
+	display: block;
+}
+
+.card[class*="login"]{
+	margin-top: 4rem;
+	width: 150vw;
+	display: none;
+	background-color: #17a2b8;
+	color: #FFF;
+}
+
+nav{
+	width: 100%;
+	height: 10vh;
+}
+
+nav ul{
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-right: 1rem;
+	height: 10vh;
+	text-align: center;
+	font-size: 1.6vw;
+	cursor: pointer;}
+}
+
+.landing h1{
+	font-size: 3vw;
+}
+
+.landing .row{
+	 margin-top: 2.5rem;
+}
+
+.welcome .row{
+	margin-top: 4.5rem;
+}
+
+.appointment .row{
+	margin-top: .1rem;
+
+}
+
+
+.landing p{
+	width: 35rem;
+	margin: 0 auto;
+}
+
+.welcome p{
+	width: 40rem;
+	margin: 0 auto;
+}	
+
+.card[class*="login"] form input[type="submit"]{
+	margin: 2.5vh auto; 
+	width: 50%;
+}
+
+.card[class*="login"] form input[type="submit"]:hover{
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+.card.info ul{
+	list-style:none;
+	padding: 0;
+	margin:0;
+}
+
+.card.info{
+	padding: 1rem;
+	text-align: left;
+	border-color: #17a2b8;
+	background-color: #f2f2f2;
+}
+
+.collapse, .panel-title{
+	text-align: left;
+}
+
+.lightbox{
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: 20;
+	background: rgba(0,0,0,0.3);
+	top: 0;
+}
+.modal, .addModal{
+	height: 35%;
+	width: 40%;
+	background: white;
+	margin: 7% 27vw;
+	border-radius: .5rem;
+	padding: 2rem;
+	position: absolute;
+	z-index: 21;
+	top: 0;
+}
+
+.modalHead{
+	text-align: right;
+}
+
+.modalBody{
+	margin-top: 3rem;
+}
+
+.addModal p{
+	display: inline-block;
+}
+.addModal label{
+	display: block;
+}
+.addModal label:not(:first-child){
+	margin-top: .5rem;
+}
+
+.addModal input[type=button]{
+	display: block;
+	margin-top: 1rem;
+}
+
+.smallTitle:not(:first-child){
+	margin-top: .5rem;
+}
+
+.smallTitle b{
+	width: 15%;
+	display: inline-block;
+}
+
+.hidden{
+	display: none;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.show{
+	display: block;
+	opacity: 1;
+}
+
+.fa.fa-times{
+	color: red;
+	cursor: pointer;
+}
+.ui-timepicker-wrapper{
+	z-index: 22;
+}
+
+.fc-event, .fc-event-dot{
+	background-color: #17a2b8;
+	color: #FFF!important;
+}
+
+#treatmentTable .col-12 .col-2{
+	display: inline;
+	text-align: left;
+	float: left;
+	border-bottom: 1px solid #17a2b8;
+}

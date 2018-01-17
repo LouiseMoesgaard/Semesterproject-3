@@ -216,3 +216,14 @@ nav ul li{
 	background-color: #17a2b8;
 	color: #FFF!important;
 }
+
+#treatmentTable .col-12 .col-2{
+	display: inline;
+	text-align: left;
+	float: left;
+	border-bottom: 1px solid #17a2b8;
+}
+
+.btn{
+	width: 100%;
+}

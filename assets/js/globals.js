@@ -22,6 +22,11 @@ function XMLToJSON(data){
 	return returndata
 }
 
+function singleItemToJson(data){
+	var data = xmlParser.xml2json(data)
+	return data;
+}
+
 function prepareData(json){
 	var xml = "<Appointment>"
 	for(key in json){

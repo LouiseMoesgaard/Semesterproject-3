@@ -15,7 +15,7 @@
 			</ul>
 		</nav>
 		
-		<div id="treatment" class="container">
+<div id="treatment" class="container">
 			<div class="accountInfo">
 				<div class="info card col-3">
 					<ul>
@@ -25,20 +25,70 @@
 				</div>
 			</div>
 			<h1>Behandlingsinformation</h1>
-			<div class="calenderBox">
-				<div id="calender"></div>
-				<div class="row">
-						<div class="btn btn-info col-3 offset-2">
-							Aftale/kontakt
-						</div>
-						<div class="btn btn-info col-3 offset-2">
-							behandlingsinfo
-						</div>
-				</div>
+			<div class="row">
+					<div class="btn btn-info col-3 offset-2">
+						Aftale/kontakt
+					</div>
+					<div class="btn btn-info col-3 offset-2">
+						behandlingsinfo
+					</div>
+			</div>
+	<!-- <br/>
+		
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse1"><p align="CENTER">MR scanning</p></a>
+				</h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+				<p align="CENTER">Den 15. januar kl. 13.00 skal du ind til en MR scanning på Herlev hospital. Når du ankommer, skal du være opmærksom på, at du skal ikke have noget elektronisk udstyr på din krop imens scanningen foregår.</p>
+			</div>
+
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse2"><p align="CENTER">Undersøgelse på Bispebjerg hospital</p></a>
+				</h4>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse">
+				<p align="CENTER">Den 12. februar kl. 15.00 skal du til undersøgelse af prostatakræft på Bispebjerg hospital.</p>
+			</div>
+	
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse3"><p align="CENTER">Undersøgelse på Rigshospitalet</p></a>
+				</h4>
+			</div>
+			<div id="collapse3" class="panel-collapse collapse">
+				<p align="CENTER">Den 14. marts kl. 12.00 skal du til undersøgelse for brystkræft. Du får nærmere besked herom, når tiden nærmer sig.</p>
 			</div>
 		</div>
+		
+	</div> -->
+	<row>
+		<div class="col-12" id="treatmentTable">
+			<div class="col-12">
+				<div class="col-2">Opdateret</div>
+				<div class="col-2">Forløb startet</div>
+				<div class="col-2">Sygehus</div>
+				<div class="col-2">Afdeling</div>
+				<div class="col-2">Behandlingstype</div>
+				<div class="col-2">Diagnose</div>
+			</div>
+		</div>
+	</row>
+</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/bootstrapv4/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/js/landing-scripts.js"></script>
+		<script type="text/javascript" src="/assets/js/xmljson.js"></script>
+		<script type="text/javascript" src="/assets/js/globals.js"></script>
+		<script type="text/javascript" src="assets/js/treatment-scripts.js"></script>
+		<script type="text/javascript">
+			var user = JSON.parse(sessionStorage.getItem("user"))
+			if(user != null && user.staff != 0){
+				window.location.href = "/"
+			}
+		</script>
 	</body>
 </html>

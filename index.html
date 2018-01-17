@@ -9,7 +9,7 @@
 	<body>
 		<nav>
 			<ul>
-				<li><a href="/wolcome_citiz.html">Home</a></li>
+				<li><a href="/index.html">Home</a></li>
 				<li><a href="/FAQ.html">FAQ</a></li>
 			</ul>
 		</nav>
@@ -30,20 +30,22 @@
 				</div>
 
 				<div class="card col-4 offset-4 citiz-login">
-					<form action="/welcome_citiz.html">
+					<form onsubmit="return authenticate('citiz');" id="citiz">
 						<label for="username">CPR nr.</label>
 						<input type="text" name="username" class="form-control">
 						<label for="password">Password</label>
 						<input type="password" name="password" class="form-control">
+						<input type="hidden" name="staff" value="0">
 						<input type="submit" name="Log ind" class="form-control" value="Log ind">
 					</form>
 				</div>
 				<div class="card col-4 offset-4 proff-login">
-					<form>
+					<form onsubmit="return authenticate('prof');" id="prof">
 						<label for="username">Username</label>
 						<input type="text" name="username" class="form-control">
 						<label for="password">Password</label>
 						<input type="password" name="password" class="form-control">
+						<input type="hidden" name="staff" value="1">
 						<input type="submit" name="Log ind" class="form-control" value="Log ind">
 					</form>
 				</div>
@@ -51,6 +53,32 @@
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/bootstrapv4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/assets/js/xmljson.js"></script>
+		<script type="text/javascript" src="/assets/js/globals.js"></script>
 		<script type="text/javascript" src="assets/js/landing-scripts.js"></script>
+		<script type="text/javascript">
+			function authenticate(id){
+				var xmlParser = new X2JS()
+
+				var form = $("#"+id).serialize()
+				form = form.substr(0, form.lastIndexOf("&"))
+				$.ajax({
+					url: "/api/UserController?"+form,
+					success: function(response){
+						var user = xmlParser.xml2json(response)["User"]
+						console.log(parseInt(user.id) > 0)
+						console.log(user)
+						if(parseInt(user.id) > 0){
+							sessionStorage.setItem("user", JSON.stringify(user))
+							window.location.href = "/welcome_"+id+".html"
+						}
+						else{
+							console.log("sad")
+						}
+					}
+				})
+				return false;
+			}
+		</script>
 	</body>
 </html>

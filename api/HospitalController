@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/java HospitalController "$QUERY_STRING"

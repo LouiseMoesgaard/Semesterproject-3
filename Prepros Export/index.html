@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/bootstrapv4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+		<meta charset="UTF-8"> 
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="/FAQ.html">FAQ</a></li>
+			</ul>
+		</nav>
+		<div class="landing">
+			<div class="container">
+				<div>
+					<h1>Velkommen</h1>
+					<h4>Vælg venligst et login</h4>
+					<p>Herunder kan De blandt andet få adgangs til, at se deres sundhedsdata fra det offentlige sundhedsvæsen samt behandlinger på sygehus. Er de fagperson kan de ligeledes logge ind her</p>
+				</div>
+				<div class="row">
+					<div class="btn btn-info col-3 offset-2" id="citiz-login">
+						Borger
+					</div>
+					<div class="btn btn-info col-3 offset-2" id="proff-login">
+						Fagperson
+					</div>
+				</div>
+
+				<div class="card col-4 offset-4 citiz-login">
+					<form action="/welcome_citiz.html">
+						<label for="username">CPR nr.</label>
+						<input type="text" name="username" class="form-control">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control">
+						<input type="submit" name="Log ind" class="form-control" value="Log ind">
+					</form>
+				</div>
+				<div class="card col-4 offset-4 proff-login">
+					<form>
+						<label for="username">Username</label>
+						<input type="text" name="username" class="form-control">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control">
+						<input type="submit" name="Log ind" class="form-control" value="Log ind">
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/bootstrapv4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/landing-scripts.js"></script>
+	</body>
+</html>

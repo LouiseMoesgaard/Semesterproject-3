@@ -8,3 +8,5 @@ $(".btn").click(function(event){
 	$("."+id).css("display", "block")
 	$("."+id).addClass("animated fadeInDown")
 })
+
+
